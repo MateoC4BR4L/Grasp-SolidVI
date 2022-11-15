@@ -8,7 +8,7 @@ namespace Full_GRASP_And_SOLID
         void TimeOut();
     }
 
-    public class CountdownTimer
+    public class CountdownTimer : TimerClient
     {
         private TimerClient client;
 
@@ -24,6 +24,10 @@ namespace Full_GRASP_And_SOLID
         {
             this.client.TimeOut();
             this.timer.Change(Timeout.Infinite, Timeout.Infinite);
+        }
+        public void TimeOut()
+        {
+            
         }
     }
 }
