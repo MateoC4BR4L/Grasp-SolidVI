@@ -72,5 +72,13 @@ namespace Full_GRASP_And_SOLID
             }
             return result;
         }
+        public void Cook()
+        {
+            CountdownTimer cdt = new();
+            CountdownTimer tm = new();
+            cdt.Register(this.GetCookTime(), tm);
+            cooked = true;
+        }
+        
     }
 }
